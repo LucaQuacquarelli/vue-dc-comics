@@ -81,6 +81,7 @@ export default {
         justify-content: space-between;
         align-items: center;
         padding: 20px;
+        padding-bottom: 0;
 
         img {
             width: 70%;
