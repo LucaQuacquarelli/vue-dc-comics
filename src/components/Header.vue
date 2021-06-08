@@ -80,7 +80,8 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px;
+        padding: 0 20px;
+        padding-top: 5px;
         padding-bottom: 0;
 
         img {

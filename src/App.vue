@@ -2,19 +2,25 @@
   <div id="app">
     <Header/>
     <Main/>
+    <Footer/>
+    <FooterContact/>
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Main from './components/Main.vue'
+import Header from './components/Header'
+import Main from './components/Main'
+import Footer from './components/Footer'
+import FooterContact from './components/FooterContact'
 
 
 export default {
   name: 'App',
   components: {
     Header,
-    Main
+    Main,
+    Footer,
+    FooterContact
   }
 }
 </script>
