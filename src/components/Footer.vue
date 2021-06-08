@@ -4,42 +4,23 @@
           <div class="list">
               <h4>DC Comics</h4>
               <ul>
-                  <li><a href="#characters">Characters</a></li>
-                  <li><a href="#comics">Comics</a></li>
-                  <li><a href="#movies">Movies</a></li>
-                  <li><a href="#tv">Tv</a></li>
-                  <li><a href="#games">Games</a></li>
-                  <li><a href="#videos">Videos</a></li>
-                  <li><a href="#news">News</a></li>
+                  <li v-for="(link, index) in linkComics" :key="index"><a :href="`#${link.url}`">{{link.linkName}}</a></li>
               </ul>
               <h4>Shop</h4>
               <ul>
-                  <li><a href="#shop-dc">Shop DC</a></li>
-                  <li><a href="#shop-dc-collectables">Shop DC Collectables</a></li>
+                  <li v-for="(link, index) in linkShop" :key="index"><a :href="`#${link.url}`">{{link.linkName}}</a></li>
               </ul>
           </div>
           <div class="list">
-              <h4>DC Comics</h4>
+              <h4>DC</h4>
               <ul>
-                  <li><a href="#characters">Characters</a></li>
-                  <li><a href="#comics">Comics</a></li>
-                  <li><a href="#movies">Movies</a></li>
-                  <li><a href="#tv">Tv</a></li>
-                  <li><a href="#games">Games</a></li>
-                  <li><a href="#videos">Videos</a></li>
-                  <li><a href="#news">News</a></li>
+                  <li v-for="(link, index) in linkDc" :key="index"><a :href="`#${link.url}`">{{link.linkName}}</a></li>
               </ul>
           </div>
           <div class="list">
-              <h4>DC Comics</h4>
+              <h4>Sites</h4>
               <ul>
-                  <li><a href="#characters">Characters</a></li>
-                  <li><a href="#comics">Comics</a></li>
-                  <li><a href="#movies">Movies</a></li>
-                  <li><a href="#tv">Tv</a></li>
-                  <li><a href="#games">Games</a></li>
-                  <li><a href="#videos">Videos</a></li>
-                  <li><a href="#news">News</a></li>
+                  <li v-for="(link, index) in linkSites" :key="index"><a :href="`#${link.url}`">{{link.linkName}}</a></li>
               </ul>
           </div>
       </div>
@@ -51,7 +32,118 @@
 
 <script>
 export default {
-    
+    data: function() {
+        return {
+            linkComics: [
+                {
+                    url: "characters",
+                    linkName: "Characters"
+                },
+                {
+                    url: "comics",
+                    linkName: "Comics"
+                },
+                {
+                    url: "movies",
+                    linkName: "Movies"
+                },
+                {
+                    url: "tv",
+                    linkName: "Tv"
+                },
+                {
+                    url: "games",
+                    linkName: "Games"
+                },
+                {
+                    url: "videos",
+                    linkName: "Videos"
+                },
+                {
+                    url: "news",
+                    linkName: "News"
+                },
+            ],
+            linkShop: [
+                {
+                    url: "shop-dc",
+                    linkName: "Shop DC"
+                },
+                {
+                    url: "shop-dc-collectibles",
+                    linkName: "Shop DC Collectibles"
+                }
+            ],
+            linkDc: [
+                {
+                    url: "term-of-use",
+                    linkName: "Term Of Use"
+                },
+                {
+                    url: "privacy-policy-new",
+                    linkName: "Privacy Policy (New)"
+                },
+                {
+                    url: "ad-choices",
+                    linkName: "Ad Choices"
+                },
+                {
+                    url: "advertising",
+                    linkName: "Advertising"
+                },
+                {
+                    url: "jobs",
+                    linkName: "Jobs"
+                },
+                {
+                    url: "subscriptions",
+                    linkName: "Subscriptions"
+                },
+                {
+                    url: "talent-workshop",
+                    linkName: "Talent Workshop"
+                },
+                {
+                    url: "cpsc-certificates",
+                    linkName: "CPSC Certificates"
+                },
+                {
+                    url: "ratings",
+                    linkName: "Ratings"
+                },
+                {
+                    url: "shop-helps",
+                    linkName: "Shop Help"
+                },
+                {
+                    url: "contact-us",
+                    linkName: "Contact Us"
+                }
+            ],
+            linkSites: [
+                {
+                    url: "dc",
+                    linkName: "DC"
+                },
+                {
+                    url: "mad-magazine",
+                    linkName: "MAD Magazine"
+                },
+                {
+                    url: "dc-kids",
+                    linkName: "DC Kids"
+                },
+                {
+                    url: "dc-universe",
+                    linkName: "DC Universe"
+                },
+                {
+                    url: "dc-power-visa",
+                    linkName: "DC Power Visa"
+                },
+            ]
+        }
+    }
 }
 </script>
 

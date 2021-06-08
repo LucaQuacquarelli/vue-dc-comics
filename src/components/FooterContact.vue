@@ -3,17 +3,40 @@
         <button>sign-up now!</button>
         <div class="contact">
             <span>follow us</span>
-            <img src="../assets/img/footer-facebook.png" alt="fb icon">
-            <img src="../assets/img/footer-twitter.png" alt="twitter icon">
-            <img src="../assets/img/footer-youtube.png" alt="yt icon">
-            <img src="../assets/img/footer-pinterest.png" alt="pintarest icon">
-            <img src="../assets/img/footer-periscope.png" alt="periscope icon">
+            <img v-for="(image, index) in images" :key="index"
+            :src="image.url" :alt="`${image.alt} icon`">
         </div>
     </div> 
 </template>
 
 <script>
 export default {
+    data: function() {
+        return {
+            images: [
+                {
+                    url: require("../assets/img/footer-facebook.png"),
+                    alt: "fb"
+                },
+                {
+                    url: require("../assets/img/footer-twitter.png"),
+                    alt: "twitter"
+                },
+                {
+                    url: require("../assets/img/footer-youtube.png"),
+                    alt: "yt"
+                },
+                {
+                    url: require("../assets/img/footer-pinterest.png"),
+                    alt: "pinterest"
+                },
+                {
+                    url: require("../assets/img/footer-periscope.png"),
+                    alt: "periscope"
+                },
+            ]
+        }
+    }
 
 }
 </script>

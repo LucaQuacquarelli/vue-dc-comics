@@ -2,7 +2,7 @@
   <header>
       <div class="logo-container">
           <a href="#">
-              <img src="../assets/img/dc-logo.png" alt="dc logo">
+              <img :src="pageLogo.imgUrl" :alt="pageLogo.imgAlt">
           </a>
       </div>
       <nav>
@@ -22,6 +22,10 @@
 export default {
     data: function () {
         return {
+            pageLogo: {
+                imgUrl: require("../assets/img/dc-logo.png"),
+                imgAlt: "Term Of Use"
+            },
             links: [
                 {
                     name: "Characters",

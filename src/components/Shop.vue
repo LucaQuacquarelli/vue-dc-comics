@@ -1,31 +1,50 @@
 <template>
     <section>
-        <div class="shop">
-            <img src="../assets/img/buy-comics-digital-comics.png" alt="subscription icon">
-            <a href="#digital-comics">digital comics</a>
-        </div>
-        <div class="shop">
-            <img src="../assets/img/buy-comics-merchandise.png" alt="subscription icon">
-            <a href="#dc-merchandise">dc merchandise</a>
-        </div>
-        <div class="shop">
-            <img src="../assets/img/buy-comics-subscriptions.png" alt="subscription icon">
-            <a href="#subscription">subscription</a>
-        </div>
-        <div class="shop">
-            <img src="../assets/img/buy-comics-shop-locator.png" alt="shop-locator icon">
-            <a href="#comic-shop-locator">comic shop locator</a>
-        </div>
-        <div class="shop">
-            <img src="../assets/img/buy-dc-power-visa.svg" alt="visa icon">
-            <a href="#dc-power-visa">dc power visa</a>
+        <div v-for="(shop, index) in shops" :key="index" class="shop">
+            <img :src="shop.imgUrl" :alt="`${shop.imgAlt} icon`">
+            <a :href="`#${shop.linkUrl}`">{{shop.linkName}}</a>
         </div>
     </section>
 </template>
 
 <script>
 export default {
-
+    data: function() {
+        return {
+            shops: [
+                {
+                    imgUrl: require("../assets/img/buy-comics-digital-comics.png"),
+                    imgAlt: "digital comics",
+                    linkUrl: "digital-comics",
+                    linkName: "digital comics"
+                },
+                {
+                    imgUrl: require("../assets/img/buy-comics-merchandise.png"),
+                    imgAlt: "merchandise",
+                    linkUrl: "merchandise",
+                    linkName: "merchandise"
+                },
+                {
+                    imgUrl: require("../assets/img/buy-comics-subscriptions.png"),
+                    imgAlt: "subscription",
+                    linkUrl: "subscriptions",
+                    linkName: "subscriptions"
+                },
+                {
+                    imgUrl: require("../assets/img/buy-comics-shop-locator.png"),
+                    imgAlt: "comic shop locator",
+                    linkUrl: "comic-shop-locator",
+                    linkName: "comic shop locator"
+                },
+                {
+                    imgUrl: require("../assets/img/buy-dc-power-visa.svg"),
+                    imgAlt: "dc power visa",
+                    linkUrl: "dc-power-visa",
+                    linkName: "dc power visa"
+                }
+            ]
+        }
+    }
 }
 </script>
 
