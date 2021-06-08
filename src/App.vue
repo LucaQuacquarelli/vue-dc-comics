@@ -2,6 +2,7 @@
   <div id="app">
     <Header/>
     <Main/>
+    <Shop/>
     <Footer/>
     <FooterContact/>
   </div>
@@ -12,6 +13,7 @@ import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
 import FooterContact from './components/FooterContact'
+import Shop from './components/Shop'
 
 
 export default {
@@ -20,7 +22,8 @@ export default {
     Header,
     Main,
     Footer,
-    FooterContact
+    FooterContact,
+    Shop
   }
 }
 </script>
